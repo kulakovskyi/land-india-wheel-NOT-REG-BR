@@ -1,3 +1,13 @@
+@media screen and (min-width: 2200px)
+  .bonus
+    &__main
+      &-txt
+        font-size: 84px
+        line-height: 92px
+        max-width: 577px
+        bottom: 245px
+        left: -558px
+
 @media screen and (min-width: 2400px)
   .bonus
     &__main
@@ -10,7 +20,7 @@
       &-txt
         font-size: 114px
         line-height: 122px
-        max-width: 600px
+        max-width: 671px
         bottom: 245px
         left: -730px
       &-woman
@@ -56,6 +66,7 @@
   .bonus
     &__footer
       right: 25px
+      bottom: 25px
       transform-origin: bottom right
       transform: scale(0.9)
     &__main
@@ -211,6 +222,7 @@
       &-txt
         font-size: 60px
         line-height: 68px
+        max-width: 358px
       &-woman
         height: 85vh
         right: -370px
@@ -465,6 +477,13 @@
         left: -194px
         bottom: 215px
 
+
+@media screen and (max-width: 1260px) and (min-height: 1000px)
+  .bonus
+    &__main
+      &-txt
+        left: -177px
+
 @media screen and (max-width: 1205px) and (max-height: 600px)
   .bonus
     &__main
@@ -491,6 +510,7 @@
         line-height: 51px
         left: -125px
         bottom: 220px
+        max-width: 273px
     .chip-4
       left: 130px
 
@@ -662,7 +682,7 @@
 @media screen and (max-width: 1024px) and (orientation: portrait) and (max-height: 1300px)
   .bonus
     &__footer
-      transform: scale(0.67)
+      transform: scale(0.9)
       right: 30px
       bottom: 30px
     &__main
@@ -726,6 +746,16 @@
       &-woman
         right: -132px
 
+@media screen and (max-width: 920px) and (orientation: landscape)
+  .bonus
+    &__main
+      &-txt
+        transform-origin: right center
+        transform: scale(0.8)
+        left: -35px
+      &-woman
+        right: -95px
+
 @media screen and (max-width: 834px) and (orientation: portrait)
   .bonus
     &__main
@@ -755,8 +785,9 @@
       right: 230px
       top: 230px
     &__footer
-      left: 25px
+      //left: 25px
       bottom: 20px
+      right: 20px
     &__firstWin,
     &__secondWin
       transform: scale(0.7)
@@ -813,8 +844,7 @@
 @media screen and (max-width: 768px) and (orientation: portrait)
   .bonus
     &__footer
-      &-top
-        margin: 0 15px 0 0
+      transform: scale(.7)
     &__main
       &-logo
         width: 280px
@@ -822,8 +852,8 @@
         transform: scale(0.7)
         margin-bottom: -40px
       &-txt
-        font-size: 48px
-        line-height: 54px
+        font-size: 43px
+        line-height: 47px
         top: 134px
     .chip-5
       right: 200px
@@ -922,7 +952,7 @@
     &__main
       &-txt
         left: 15px
-        z-index: 4
+        z-index: 5
 
 @media screen and (max-width: 715px) and (orientation: portrait)
   .bonus
@@ -944,7 +974,7 @@
         font-size: 25px
         line-height: 30px
         left: 22px
-        max-width: 200px
+        max-width: 156px
         top: 90px
         br
           &:first-of-type
@@ -963,13 +993,12 @@
         height: 450px
     &__footer
       padding: 20px 15px
-      height: 190px
+      height: 150px
       width: 100%
       transform: scale(1)
       background: $blue
       left: 0
-      bottom: -191px
-      flex-direction: column
+      bottom: -151px
       justify-content: center
       align-items: center
       z-index: 2
@@ -1033,25 +1062,41 @@
       width: 416px
       height: 325px
       &-title
-        margin: 10px 0 7px
+        margin: 0 0 12px 0
+        font-size: 18px
+        line-height: 18px
       &-try
         font-size: 14px
       &-btn
         padding: 16px 65px 14px
-        margin-top: 22px
+        margin-top: 11px
+      &-sum
+        margin: 0 0 6px 0
     &__firstWin
       &-sum
-        flex-direction: row
-        align-items: flex-end
+        align-items: center
         font-size: 40px
         line-height: 50px
         span
-          line-height: 37px
-          margin-left: 10px
+          font-size: 17px
+          line-height: 20px
+          margin: -2px 0 0 0
     &__secondWin
+      &-title
+        margin: 0 0 17px 0
+      &-try
+        margin-top: 10px
+        font-size: 13px
+        line-height: 16px
       &-sum
-        font-size: 40px
-        line-height: 50px
+        font-size: 27px
+        line-height: 10px
+        span
+          font-size: 19px
+          line-height: 19px
+          &:nth-child(3)
+            font-size: 27px
+            line-height: 35px
       &-try
         max-width: 69%
     .win-mob
@@ -1129,7 +1174,7 @@
   .bonus
     &__main
       &-woman
-        right: -45px
+        right: -52px
     &__footer
       &-top
         margin: 0 0 20px 0
@@ -1152,20 +1197,6 @@
         right: -37px
     .chip-4
       top: -77px
-    //&__footer
-      //&-googlePlay
-      //  min-width: 174px
-      //&-appStore
-      //  min-width: 128px
-//
-//@media screen and (max-width: 380px) and (orientation: portrait)
-//  .bonus
-//    &__footer
-//      &-googlePlay
-//        min-width: 173px
-//      &-appStore
-//        min-width: 128px
-
 
 @media screen and (max-width: 375px) and (orientation: portrait) and (max-height: 560px)
   .bonus
@@ -1183,6 +1214,12 @@
         bottom: 180px
       .overlayChip-7
         right: -110px
+
+@media screen and (max-width: 375px) and (orientation: portrait) and (min-height: 800px)
+  .bonus
+    &__main
+      &-woman
+        bottom: 260px
 
 @media screen and (max-width: 360px) and (orientation: portrait)
   .bonus
@@ -1214,11 +1251,6 @@
     &__main
       &-wheel
         transform: scale(0.39)
-    //&__footer
-    //  &-googlePlay
-    //    min-width: 146px
-    //  &-appStore
-    //    min-width: 128px
 
 @media screen and (max-width: 320px) and (orientation: portrait)
   .bonus
@@ -1257,18 +1289,32 @@
       &-btn
         margin-top: 12px
     &__secondWin
-      &-sum
-        font-size: 35px
-        line-height: 40px
+      &-title
+        font-size: 14px
+        line-height: 13px
+        margin: 0 0 15px 0
       &-try
-        font-size: 12px
+        margin-top: 8px
+        font-size: 11px
+        line-height: 12px
+      &-btn
+        padding: 16px 52px 14px
+      &-sum
+        font-size: 24px
+        span
+          font-size: 16px
+          line-height: 17px
+        span:nth-child(3)
+          font-size: 27px
+          line-height: 25px
 
 @media screen and (max-width: 320px) and (orientation: portrait) and (max-height: 600px)
   .bonus
     &__main
       &-txt
-        font-size: 22px
+        font-size: 24px
         line-height: 24px
+        left: 17px
       &-woman
         height: 290px
         bottom: 230px
@@ -1276,6 +1322,9 @@
       &-firstWoman,
       &-secondWoman
         bottom: 130px
+    &__secondWin
+      &-btn
+        padding: 16px 54px 14px
 
 @media screen and (max-width: 915px) and (orientation: landscape) and (max-height: 450px)
   .bonus
@@ -1287,7 +1336,7 @@
       &-txt
         left: 17px
         bottom: 70px
-        font-size: 40px
+        font-size: 39px
         line-height: 48px
         max-width: 220px
       &-wheel
@@ -1296,7 +1345,7 @@
         &-wrap
           transform: translateX(80px)
       &-woman
-        right: 0
+        right: -20px
         height: 400px
     &__footer
       position: fixed
@@ -1336,13 +1385,10 @@
     &__firstWin,
     &__secondWin
       transform: scale(0.45)
-    &__firstWin
-      &-sum
-        flex-direction: row
-        align-items: flex-end
-        span
-          margin-left: 10px
-          line-height: 37px
+      &-title
+        margin: 0 0 15px 0
+      &-btn
+        margin-top: 23px
 
 @media screen and (max-width: 915px) and (orientation: landscape) and (max-height: 390px)
   .bonus
@@ -1469,6 +1515,8 @@
     &__main
       &-wheel
         left: -40px
+      &-txt
+        left: -2px
 
 @media screen and (max-width: 670px) and (orientation: landscape) and (max-height: 375px)
   .bonus
@@ -1481,7 +1529,7 @@
         &-wrap
           transform: translateX(-230px)
       &-txt
-        font-size: 30px
+        font-size: 31px
         line-height: 35px
     .chip-4
       top: -40px
@@ -1513,6 +1561,27 @@
         &-wrap
           transform: translateX(-310px)
 
+@media screen and (max-width: 600px) and (orientation: landscape) and (max-height: 375px)
+  .bonus
+    &__main
+      &-woman
+        right: -50px
+    &__secondWin
+      &-info
+        top: 40px
+      &-title
+        font-size: 18px
+        line-height: 22px
+      &-sum
+        font-size: 40px
+        line-height: 30px
+        span
+          &:nth-child(3)
+            font-size: 40px
+            line-height: 36px
+      &-try
+        max-width: 60%
+
 @media screen and (max-height: 390px)
   .bonus
     &__main
@@ -1526,8 +1595,9 @@
       &-logo
         width: 160px
       &-txt
-        font-size: 25px
-        line-height: 30px
+        font-size: 31px
+        line-height: 35px
+        left: -22px
       &-wheel
         left: 21px
         transform: scale(0.34)
@@ -1553,9 +1623,20 @@
     &__secondWin
       height: 435px
     &__secondWin
+      &-info
+        top: 70px
+      &-title
+        font-size: 18px
+        line-height: 22px
       &-sum
-        font-size: 50px
-        line-height: 50px
+        font-size: 40px
+        line-height: 30px
+        span
+          &:nth-child(3)
+            font-size: 40px
+            line-height: 36px
+      &-try
+        max-width: 60%
 
 @media screen and (max-width: 570px) and (orientation: landscape) and (max-height: 325px)
   .bonus

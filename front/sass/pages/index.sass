@@ -184,13 +184,14 @@ body
       text-transform: uppercase
       letter-spacing: 0.05em
       text-align: center
-      margin: 27px 0 20px
+      margin: 0 0 27px 0
     &-sum
       font-family: $font-rubik
       line-height: 70px
       color: $magenta
       text-transform: uppercase
       letter-spacing: 0.01em
+      margin: 0 0 15px 0
     &-try
       font-family: $font-suisse-med
       font-size: 18px
@@ -213,20 +214,26 @@ body
       flex-direction: column
       align-items: center
       span
-        font-size: 20px
-        line-height: 20px
+        font-size: 25px
+        line-height: 26px
         margin-top: 2px
   &__secondWin
     &-info
       top: 70px
       bottom: 68px
     &-sum
-      font-size: 60px
+      font-size: 45px
+      line-height: 40px
       position: relative
+      text-align: center
       span
-        color: $grey
-    &-title
-      margin-top: 20px
+        font-size: 30px
+        line-height: 31px
+        color: $magenta
+        &:nth-child(3)
+          color: $grey
+          font-size: 45px
+          line-height: 46px
     &-try
       max-width: 40%
 
@@ -274,7 +281,7 @@ body
       color: $grey
       text-transform: uppercase
       letter-spacing: 0.03em
-      max-width: 392px
+      max-width: 470px
       position: absolute
       bottom: 170px
       left: -426px
@@ -396,26 +403,15 @@ body
         height: 100%
   &__footer
     position: absolute
-    bottom: 16px
-    right: 70px
+    bottom: 40px
+    right: 40px
     z-index: 4
     display: flex
     align-items: center
-    &-top
-      max-width: 435px
-      margin: 0 57px 0 0
-      min-width: 165px
-    &-link
+    &-img
       display: inline-block
-    &-bottom
-      display: flex
-      align-items: stretch
-    &-appStore
-      max-width: 168px
-      min-width: 168px
-      margin: 0 15px 0 0
-    &-googlePlay
-      min-width: 188px
+      &:not(:last-child)
+        margin: 0 20px 0 0
 
 
 
