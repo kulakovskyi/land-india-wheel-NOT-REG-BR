@@ -1,0 +1,548 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$green-hover: #09B47F
+$grey: #EDEDED
+$text: #292929
+
+$font-suisse-bold: SuisseIntl-Bold, sans-serif
+$font-suisse-med: SuisseIntl-Medium, sans-serif
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif
+$font-rubik: Rubik, sans-serif
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  img
+    max-width: 100%
+    height: auto
+
+.container
+  max-width: 700px
+  margin: auto
+
+.position
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+
+.btn
+  font-family: $font-suisse-semb
+  font-size: 18px
+  color: $blue
+  text-transform: uppercase
+  letter-spacing: 0.07em
+  background: linear-gradient(1.54deg, #52B382 0.98%, #67DEA2 98.36%)
+  border-radius: 4px
+  transition: background .3s linear
+  &:hover
+    background: linear-gradient(1.54deg, #67DEA2 0.98%, #52B382 98.36%)
+
+.bonus
+  width: 100%
+  height: 100%
+  overflow: hidden
+  position: relative
+  background: #040414
+  &__overlay
+    background: rgba(18, 12, 41, 0.5)
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 10
+    transition: opacity .7s linear, visibility .5s linear
+    &-firstWoman,
+    &-secondWoman
+      height: 90vh
+      position: absolute
+      bottom: -4px
+      right: 0
+      z-index: 1
+      pointer-events: none
+      img
+        height: 100%
+    &-chip
+      position: absolute
+    .overlayChip-1
+      width: 243px
+      height: 236px
+      bottom: 20px
+      left: 43%
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-5.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-5.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/chip-5-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/chip-5-mob.png") no-repeat 0 0/contain
+    .overlayChip-2
+      width: 265px
+      height: 219px
+      bottom: 180px
+      left: 16%
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-1.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-1.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/chip-1-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/chip-1-mob.png") no-repeat 0 0/contain
+    .overlayChip-3
+      width: 190px
+      height: 215px
+      bottom: 220px
+      left: -50px
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-2.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-2.png") no-repeat 0 0/contain
+    .overlayChip-4
+      width: 190px
+      height: 215px
+      top: 60px
+      left: -50px
+      transform: rotate(85deg)
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-2.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-2.png") no-repeat 0 0/contain
+    .overlayChip-5
+      width: 420px
+      height: 290px
+      top: 100px
+      left: 20%
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-4.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-4.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/chip-4-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/chip-4-mob.png") no-repeat 0 0/contain
+    .overlayChip-6
+      width: 190px
+      height: 215px
+      top: -40px
+      left: 47%
+      transform: rotate(85deg)
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-2.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-2.png") no-repeat 0 0/contain
+    .overlayChip-7
+      width: 256px
+      height: 245px
+      top: 50px
+      right: 50px
+      transform: rotate(105deg)
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-3.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-3.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/chip-5-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/chip-3-mob.png") no-repeat 0 0/contain
+  &__firstWin,
+  &__secondWin
+    width: 704px
+    height: 550px
+    position: relative
+    @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+      background: url("../img/popup-small.png") no-repeat 0 0/contain
+    @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+      background: url("../img/popup-small.png") no-repeat 0 0/contain
+    @media screen and (max-width: 550px) and (orientation: portrait)
+      background: url("../img/popup-small-mob.png") no-repeat 0 0/contain
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url("../img/popup-small-mob.png") no-repeat 0 0/contain
+    &-info
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      position: absolute
+      top: 80px
+      bottom: 80px
+      left: 0
+      right: 0
+    &-title
+      font-family: $font-suisse-semb
+      font-size: 22px
+      line-height: 22px
+      color: $grey
+      text-transform: uppercase
+      letter-spacing: 0.05em
+      text-align: center
+      margin: 27px 0 20px
+    &-sum
+      font-family: $font-rubik
+      line-height: 70px
+      color: $magenta
+      text-transform: uppercase
+      letter-spacing: 0.01em
+    &-try
+      font-family: $font-suisse-med
+      font-size: 18px
+      line-height: 24px
+      color: $grey
+      letter-spacing: 0.03em
+      text-align: center
+      .amount
+        span
+          color: $magenta
+    &-btn
+      padding: 22px 95px 20px
+      margin-top: 40px
+      text-align: center
+      cursor: pointer
+  &__firstWin
+    &-sum
+      font-size: 70px
+      display: flex
+      flex-direction: column
+      align-items: center
+      span
+        font-size: 20px
+        line-height: 20px
+        margin-top: 2px
+  &__secondWin
+    &-info
+      top: 70px
+      bottom: 68px
+    &-sum
+      font-size: 60px
+      position: relative
+      span
+        color: $grey
+    &-title
+      margin-top: 20px
+    &-try
+      max-width: 40%
+
+  &__main
+    height: 100%
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    &-video
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      &:before
+        content: ""
+        background: rgba(0,0,0,.1)
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+      &-bg
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &-logo
+      background: url("../img/logo.svg") no-repeat 0 0/contain
+      width: 474px
+      height: 154px
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+
+    &-wrapper
+      position: relative
+      z-index: 2
+      transform: translateX(-17px)
+    &-txt
+      font-family: $font-suisse-bold
+      font-size: 76px
+      line-height: 80px
+      color: $grey
+      text-transform: uppercase
+      letter-spacing: 0.03em
+      max-width: 392px
+      position: absolute
+      bottom: 170px
+      left: -426px
+      z-index: 2
+      span
+        color: $magenta
+      br
+        &:first-of-type
+          display: block
+        &:last-of-type
+          display: none
+    &-wheel
+      width: 857px
+      height: 910px
+      position: relative
+      flex-shrink: 0
+      &-wrap
+        position: relative
+      &-arrow
+        background: url("../img/wheel-arrow.svg") no-repeat 0 0/contain
+        width: 82px
+        height: 87px
+        top: -245px
+        z-index: 3
+      &-btn
+        width: 200px
+        height: 200px
+        z-index: 4
+        cursor: pointer
+        transform: translateY(5px)
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-btn.png") no-repeat 0 0/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-btn.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-btn-mob.png") no-repeat 0 0/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-btn-mob.png") no-repeat 0 0/contain
+      &-bulbs
+        width: 857px
+        height: 869px
+        top: -6px
+        z-index: 3
+        opacity: 0
+        transition: opacity .4s linear
+        animation: 1.8s infinite bulbs-opacity ease-in-out
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-bulbs.png") no-repeat 0 0/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-bulbs.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-bulbs-mob.png") no-repeat 0 0/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-bulbs-mob.png") no-repeat 0 0/contain
+      &-frame
+        width: 780px
+        height: 780px
+        position: relative
+        margin: auto
+        z-index: 2
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-frame.png") no-repeat 0 0/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-frame.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-frame-mob.png") no-repeat 0 0/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-frame-mob.png") no-repeat 0 0/contain
+      &-reel
+        width: 700px
+        height: 700px
+        top: 40px
+        bottom: auto
+        z-index: 2
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-reel.png") no-repeat 0 0/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-reel.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-reel-mob.png") no-repeat 0 0/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-reel-mob.png") no-repeat 0 0/contain
+      &-light
+        width: 1395px
+        height: 1395px
+        left: 50%
+        margin-left: -698px
+        top: 0
+        z-index: 1
+        animation: 1.8s infinite lamps-light ease-in-out
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-light.png") no-repeat 50% 50%/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-light.png") no-repeat 50% 50%/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-light-mob.png") no-repeat 50% 50%/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-light-mob.png") no-repeat 50% 50%/contain
+      &-bottom
+        width: 857px
+        height: 180px
+        top: auto
+        bottom: -147px
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-bottom.png") no-repeat 0 0/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-bottom.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-bottom-mob.png") no-repeat 0 0/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-bottom-mob.png") no-repeat 0 0/contain
+    &-woman
+      height: 87vh
+      position: absolute
+      bottom: -4px
+      right: -523px
+      z-index: 3
+      img
+        height: 100%
+  &__footer
+    position: absolute
+    bottom: 16px
+    right: 70px
+    z-index: 4
+    display: flex
+    align-items: center
+    &-top
+      max-width: 435px
+      margin: 0 57px 0 0
+      min-width: 165px
+    &-link
+      display: inline-block
+    &-bottom
+      display: flex
+      align-items: stretch
+    &-appStore
+      max-width: 168px
+      min-width: 168px
+      margin: 0 15px 0 0
+    &-googlePlay
+      min-width: 188px
+
+
+
+  &__chip
+    position: absolute
+  .chip-1
+    width: 265px
+    height: 219px
+    bottom: 17px
+    left: 25%
+    @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+      background: url("../img/chip-1.png") no-repeat 0 0/contain
+    @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+      background: url("../img/chip-1.png") no-repeat 0 0/contain
+    @media screen and (max-width: 550px) and (orientation: portrait)
+      background: url("../img/chip-1-mob.png") no-repeat 0 0/contain
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url("../img/chip-1-mob.png") no-repeat 0 0/contain
+  .chip-2
+    width: 190px
+    height: 215px
+    bottom: 53px
+    left: -41px
+    @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+      background: url("../img/chip-2.png") no-repeat 0 0/contain
+    @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+      background: url("../img/chip-2.png") no-repeat 0 0/contain
+  .chip-3
+    width: 256px
+    height: 245px
+    top: 293px
+    left: 123px
+    @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+      background: url("../img/chip-3.png") no-repeat 0 0/contain
+    @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+      background: url("../img/chip-3.png") no-repeat 0 0/contain
+    @media screen and (max-width: 550px) and (orientation: portrait)
+      background: url("../img/chip-3-mob.png") no-repeat 0 0/contain
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url("../img/chip-3-mob.png") no-repeat 0 0/contain
+  .chip-4
+    width: 420px
+    height: 290px
+    top: 112px
+    left: 300px
+    @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+      background: url("../img/chip-4.png") no-repeat 0 0/contain
+    @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+      background: url("../img/chip-4.png") no-repeat 0 0/contain
+    @media screen and (max-width: 550px) and (orientation: portrait)
+      background: url("../img/chip-4-mob.png") no-repeat 0 0/contain
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url("../img/chip-4-mob.png") no-repeat 0 0/contain
+  .chip-5
+    width: 243px
+    height: 236px
+    top: -53px
+    right: 398px
+    @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+      background: url("../img/chip-5.png") no-repeat 0 0/contain
+    @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+      background: url("../img/chip-5.png") no-repeat 0 0/contain
+    @media screen and (max-width: 550px) and (orientation: portrait)
+      background: url("../img/chip-5-mob.png") no-repeat 0 0/contain
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url("../img/chip-5-mob.png") no-repeat 0 0/contain
+
+.pulse-btn
+  animation: 1.8s infinite pulse-btn ease-in-out
+
+@keyframes pulse-btn
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.11)
+  100%
+    transform: scale(1)
+
+@keyframes bulbs-opacity
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    opacity: 0
+
+@keyframes lamps-light
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
+.reel-rotation-first
+  animation: 6s reel-rotation-first cubic-bezier(.25,.75,.5,1.05) forwards
+
+@keyframes reel-rotation-first
+  0%
+    transform: rotate(0deg)
+  80%
+    transform: rotate(998deg)
+  90%
+    transform: rotate(986deg)
+  100%
+    transform: rotate(992deg)
+
+.reel-rotation-second
+  animation: 6s reel-rotation-second cubic-bezier(.25,.75,.5,1.05) forwards
+
+@keyframes reel-rotation-second
+  0%
+    transform: rotate(992deg)
+  80%
+    transform: rotate(1852deg)
+  90%
+    transform: rotate(1840deg)
+  100%
+    transform: rotate(1846deg)
+
+.hide
+  display: none
+
+.opacity-overlay
+  opacity: 0
+  visibility: hidden
+
+.blur
+  filter: blur(10px)
+  transition: .7s ease
